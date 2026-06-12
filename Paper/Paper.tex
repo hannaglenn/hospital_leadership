@@ -1,0 +1,208 @@
+\documentclass[12pt]{article}
+
+\usepackage{tgtermes}
+\usepackage{epsf}
+\usepackage{epstopdf}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+\usepackage{dcolumn}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{mwe}
+\usepackage{url}
+%\usepackage{harvard}
+\usepackage{fancyheadings}
+\usepackage{longtable}
+\usepackage{authblk}
+\usepackage{setspace}
+%\usepackage[nomarkers]{endfloat}
+\usepackage{float}
+\usepackage{bbm}
+%\usepackage{titling}
+\usepackage{subcaption}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{import}
+\usepackage[backend=biber,style=authoryear,
+sorting=nyt,citestyle=authoryear]{biblatex}
+\addbibresource{references.bib}
+%\usepackage[nomarkers,nofiglist,notablist]{endfloat}
+\usepackage{subcaption}
+\usepackage{caption}
+
+\onehalfspacing
+\textwidth 6.5in \oddsidemargin 0in \evensidemargin -0.6in
+\textheight 8.5in \topmargin -0.2in
+
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\
+		\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\
+		\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\
+		\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{P}[1]{>{\raggedright\tabularxbackslash}p{#1}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+
+\captionsetup{justification=centering,singlelinecheck=false}
+
+
+\newcommand{\xsub}[1]{%
+	\mbox{\scriptsize\begin{tabular}{@{}c@{}}#1\end{tabular}}%
+}
+
+%\renewcommand{\thetable}{\Roman{table}}
+
+\begin{document}
+	
+	
+	
+	
+	\linespread{1.2}\title{\vspace{-0.5in} Exploring Nonprofit Hospital Executive Teams in the US} 
+	
+	\date{\today}
+	
+	\author{\vspace{10mm}Hanna Glenn\footnote{School of Economics, University of Queensland, hanna.glenn@uq.edu.au} }
+	
+	\maketitle
+	%\setlength{\droptitle}{-10pt}
+	
+	\vspace{-0.2in}
+	
+	\singlespacing\maketitle
+
+
+ \vspace{3mm}
+	
+\begin{abstract}
+\small{}
+\end{abstract}
+	
+	
+	
+	
+	
+
+	
+	\onehalfspacing
+	
+	\newpage
+
+    \section{Introduction}
+
+    Paragraph 1: Leaders are important! Give statistics from general media that show this. 
+
+    Executives are typically considered important drivers of a firm's practices and performance, as they are heavily involved in the culture, visions, and strategies of the firm. Public discourse emphasizes this point, stating that the highest level of leadership drives both firm and general policy landscapes (\cite{cecchi2024leadership}; \cite{boyles2023organizational}). Additionally, academic researchers have documented correlation between executive characteristics and firm outcomes, starting with \citeauthor{bertrand2003managing} (\citeyear{bertrand2003managing}), who show that manager fixed effects are an important driver of many firm behaviors. Other studies have built on this finding, showing that female executives are correlated with female employee wages and corporate strategies (\cite{flabbi2019female}; \cite{matsa2013female}), and that CEO characteristics are correlated with merger activity, culture, and performance (\cite{levi2010deal}; \cite{benmelech2015military}; \cite{graham2022corporate}; \cite{kaplan2012ceo}; \cite{custodio2013generalists}; \cite{adams2018director}; \cite{frydman2019rising}). Despite limited causal evidence, the correlation between executive leadership and firm outcomes is well established.
+
+
+    \medskip
+
+    Paragraph 2: Despite the importance of hospitals and nonprofit, we don't know as much about leadership in this context. 
+
+    Most of this literature focuses on large, publicly traded firms, reflecting both their economic importance and the availability of detailed data in these settings.\footnote{Examples of typical data sources are BoardEx, ExecuComp, and SEC EDGAR filings.} As a result, we know less about executives in industries dominated by smaller firms or alternative ownership structures. Hospitals are one such industry with significant economic and public welfare implications. Hospital spending consistently makes up almost a third of all health care spending in the US (\cite{nlm_health_statistics}), and approximately 7 percent of people have one or more hospital stays each year (\cite{cdc2020hospitalstay}). Despite the importance of hospital outcomes and behavior, we have a much more limited understanding of who is at the helm. \citeauthor{munoz2025managers} (\cite*{munoz2025managers}) exploit a policy in Chile that increases competition in CEO recruitment and show that higher-quality CEOs reduce mortality. In contrast, \citeauthor{janke2019impact} (\cite*{janke2019impact}) show that top leaders have little impact on hospital performance in England. The only study to my knowledge directly investigating leaders in health care in the US focuses on physician practices as opposed to hospitals (\cite{la2023impact}). Other work emphasizes management practices instead of managers (\cite{bloom2015impact}; \cite{bloom2020healthy}), leaving evidence surrounding hospital executives sparse and mixed depending on the setting being considered. 
+    
+    
+
+
+    \medskip
+
+    Paragraph 3: Talk about what I do in the paper. 
+
+    This paper provides the first systematic characterization of the executive landscape in hospitals in the US. I construct a novel panel of nonprofit hospital executives from 2009 to 2023 and document key features of leadership teams, including gender composition, team size, clinical experience, compensation, and turnover. I focus on nonprofit hospitals, which make up 50\% of all hospitals in the US, and staff, on average, 207 beds (\cite{ASPE_2023}). I merge these data with the American Hospital Association (AHA) Annual Survey to examine how leadership characteristics correlate with hospital outcomes. Finally, I estimate a descriptive event study to explore how changes in executive composition relate to hospital outcomes and performance.
+    
+ 
+
+    \medskip
+
+    Paragraph 4: Explain any trends that I find
+
+    \medskip
+
+    Paragraph 5: Talk about policy implications/future research
+
+    
+    \section{Data}
+
+    The novelty of this study lies primarily in the extraction of US-based individual executives of nonprofit hospitals from publicly available Tax Forms 990s. A Tax Form 990 is an annual informational return that tax-exempt organizations file with the Internal Revenue Service (IRS) to report their financial activities, governance, and compensation, providing transparency to regulators and the public. The tax forms have been used in countless studies across disciplines to assess nonprofit finances, program activities, and broader patterns of behavior  (\cite{froelich2000financial}; \cite{ely2023efiling}) The only other study that I know of to use it for key hospital-level personnel is \citeauthor{brickley2010board} (\cite*{brickley2010board}), who focus on a sample of approximately 300 hospitals. 
+    
+    I present a blank version of the form section that I focus on in Figure \ref{fig:blank_form}.\footnote{Additionally, the entire form can be viewed at \href{https://www.irs.gov/pub/irs-pdf/f990.pdf}{https://www.irs.gov/pub/irs-pdf/f990.pdf}.} Over the sample period, this particular form has changed very little apart from the addition of average hours worked per week at related organizations. In 2009, only average hours at the specified organization were required. The resulting data includes all items in table: name and title, average hours per week at specified organization and related organization, position, reportable compensation, reportable compensation from related organizations, and estimated amount of other compensation. 
+
+    \begin{figure}[ht!]
+        \centering
+        \includegraphics[width=0.75\linewidth]{Paper/Objects/blank_form.png}
+        \caption{Blank Form 990 Example, 2025}
+        \label{fig:blank_form}
+    \end{figure}
+
+    \subsection{Identifying Hospitals and Linking Across Data Sources}\label{sec:identify}
+
+    The first step in collecting comprehensive hospital data is to identify a list of firms (Employer Identification Numbers byt the IRS) that (1) operate hospital facilities and (2) can be linked to other hospital information, which mitigates the future steps of the data collection process. First, I download the universe of Tax Form 990 XMLs from the Internal Revenue Service (IRS).\footnote{https://www.irs.gov/charities-non-profits/form-990-series-downloads} Though the IRS only publishes the files from 2016 onward, this allows me to algorithmically identify firms that complete Schedule H of the Tax Form 990, s section that is only completed by firms that operate hospital facilities.\footnote{The implication of this process is that I do not collect data on hospitals that closed prior to 2016.} I save this list of 2,559 Employer Identification Numbers (EIN) along with their location and organization name for the next step in data collection.
+
+    I link the IRS-based data set of EINs to hospital identifiers from the American Hospital Association (AHA) using a multi-step cleaning and fuzzy matching procedure. I begin by standardizing organization names and address fields in both datasets. For the IRS data, I construct a unified business name variable by combining multiple name fields and applying a series of cleaning rules to handle common reporting issues, including ``doing business as'' (DBA) designations, group returns, and formatting inconsistencies. I convert all text fields to uppercase, remove punctuation and common suffixes (e.g., ``INC''), and standardize addresses and ZIP codes. I apply analogous cleaning steps to the AHA data, including standardizing abbreviations (e.g., converting ``Med'' to ``Medical'') and normalizing address and location fields.
+
+    I then perform a fuzzy string match between the IRS and AHA datasets using the Jaro-Winkler distance metric applied to organization names, restricting matches to those within a specified similarity threshold. To improve match quality, I impose additional constraints based on geographic consistency, requiring matches to occur within the same state and rewarding agreement in city, ZIP code, and address similarity. I construct a match quality index that combines these criteria, including penalties for large string distances and bonuses for exact or near-exact matches. For each EIN-year observation, I retain the match with the highest index and discard low-quality matches below a minimum threshold.
+
+    I refine the matched sample by resolving duplicate matches and enforcing a one-to-one mapping between EINs and AHA hospital identifiers. I drop observations with multiple conflicting matches and manually verify a random sample of matches, finding a high rate of accuracy. I then augment the matched set by conducting a secondary fuzzy match based on address fields for previously unmatched observations. Finally, I manually assign identifiers for a small number of remaining unmatched EINs where reliable matches can be identified.
+
+    This procedure yields a final crosswalk linking 1,836 EINs to AHA hospital identifiers, which I use to merge IRS filing data with hospital-level characteristics. The resulting matched sample provides a consistent mapping between nonprofit tax filings and hospital entities across datasets.
+
+
+    \subsection{XML Data Collection and Parsing}
+
+    I programmatically download Form 990 XML filings for each hospital EIN in the final list created in Section \ref{sec:identify} using ProPublica’s API and organization pages. The collection procedure proceeds in three steps. First, I normalize EINs to a standardized nine-digit numeric format and query the ProPublica search API for each EIN. I retain only cases where the search returns exactly one matching organization, excluding EINs that produce zero or multiple matches to avoid ambiguity. Second, for each validated EIN, I scrape the corresponding ProPublica organization page to identify all available XML filings. I collect hyperlinks corresponding to XML downloads by selecting links labeled ``XML'' or links whose URLs contain patterns consistent with XML files (e.g., ``download-xml'' or URLs ending in ``.xml''). Third, I download all available XML files for each EIN. 
+
+    I parse each XML file to construct both firm-level and person-level datasets. Because Form 990 XML schemas vary across filing types and over time, I implement a schema-agnostic parser that searches across multiple possible node structures. For each XML file, I also store diagnostic information on the parsing process, including the schema used for extracting person-level data, the number of nodes identified, the number of individuals extracted, and indicators for missing names, titles, and firm-level fields. I flag observations for review if firm-level information is incomplete, if no individuals are extracted, or if extraction relies on text-based fallback methods. I also log parsing errors to ensure transparency and reproducibility.
+
+    \subsubsection{Firm-Level Data}
+
+    From each XML file, I extract the following information: EIN and organization name, location (city, state, ZIP code, and country), filing year, and return type (e.g., Form 990, 990-EZ, 990-PF).\footnote{Form 990 filings vary by organization size and type: the standard Form 990 is used by larger nonprofits, Form 990-EZ is a shorter version for smaller organizations, and Form 990-PF applies to private foundations.} I first extract these fields directly from structured XML nodes, allowing for variation in tag names across filing formats. For address information, I accommodate both U.S. and foreign address structures, selecting the appropriate format based on the presence of relevant XML nodes. When structured fields are missing or incomplete, I implement a text-based fallback procedure. I read the raw XML content as text and use pattern matching to recover organization name, EIN, location, and filing year from header-style blocks in the filing. This approach substantially improves coverage in cases where XML structure is inconsistent. I validate each firm observation by checking for missing identifiers, names, location, or year, and flag observations requiring review. I ultimately restrict the sample to U.S.-based organizations. Specifically, I drop filings that explicitly report a foreign country in the address fields and remove all associated person-level observations for those firm-year combinations.
+
+    \subsubsection{Person-Level Data}
+
+    I construct a person-level dataset capturing leadership team members listed in each filing. For each individual, I extract name, title, average hours worked per week, role indicators (e.g., officer, director, trustee, key employee), and compensation (from the organization and related entities). I identify individuals by searching across multiple XML node structures, including Form 990 Part VII, Form 990-EZ officer sections, and Form 990-PF equivalents. To ensure robustness across filing formats, I also implement a generic search for XML nodes that simultaneously contain name and title fields. If no structured nodes are detected, I implement a text-based fallback procedure. This procedure scans the raw filing text to identify uppercase name strings and matches them to nearby lines containing recognized leadership titles (e.g., CEO, CFO, director, trustee). This step recovers leadership information from filings with non-standard formatting. I remove duplicate entries within each filing and retain only observations with non-missing names.
+
+    \subsection{Data Cleaning}
+
+    I begin by dropping invalid placeholder names and removing observations that reflect compensation descriptions rather than individuals. I convert all text to lowercase and remove duplicate records. I then clean and standardize the name field and construct role-related indicators. I create a cleaned name variable by removing punctuation, digits, parenthetical information, and references to schedules or compensation notes. Using manually curated lists of credentials and keywords (e.g., MD, RN, MBA), I generate indicator variables capturing whether an individual is a physician, nurse, or healthcare administrator. I also strip these credentials and other extraneous descriptors from the name field to isolate the underlying person name. To address inconsistencies in how names are recorded within the same organization, I implement three complementary matching procedures at the EIN level. First, I use approximate string matching (based on edit distance) to reconcile minor spelling differences, keeping the most frequently occurring version of a name. Second, I construct a graph of names that share at least two tokens (e.g., first and last name) and collapse them to a canonical version (the shortest string) within each connected component. Third, I address formatting inconsistencies such as missing spaces (e.g., “johnsmith” versus “john smith”) by identifying prefix matches and again consolidating to a canonical form. Together, these steps standardize names within organizations and reduce duplication arising from formatting variation or minor errors.
+
+    Next, I extract first names for use in gender prediction. I begin with a Social Security–based list of common first names (augmented with additional manually identified names) and tokenize each cleaned name into its component words. I use a series of decision rules, applied at the EIN-year level, to infer which token most likely represents the first name. When the majority of individuals in an organization follow a “first-name-first” convention, I assign the first token accordingly; when instead names frequently appear in “initial-lastname” or alternative formats, I assign the second token under additional conditions. I then fill in missing assignments by leveraging consistency within the same name and organization across observations, and apply additional row-level rules based on whether exactly one token matches a known first name or whether specific common names (e.g., “mary” or “john”) appear in the string. Manual checks confirm that these procedures yield consistent first-name assignments across years for the same individual.
+
+    I assign organizational roles using a structured combination of title text, name text, and the role indicator variables available in the XML filings. I proceed sequentially, prioritizing high-confidence executive classifications and allowing assignments to evolve only when no higher-priority category has been identified.
+
+    I begin by identifying core executive roles using keyword matching in both the reported title and, when informative, the name field. Specifically, I classify individuals as CEO, CFO, COO, CMO, CNO, CIO, vice president (VP), or other executives based on common variants of these titles (e.g., “chief executive,” “cfo,” “chief medical officer,” including common misspellings). These assignments are made first and are treated as final, ensuring that clear executive roles are not overwritten by later rules. I then use the Form 990 indicator variables to identify board members. If an individual is flagged only as a trustee or director (and not as an officer, key employee, or highly compensated employee), I classify them as a board member regardless of their reported title. I also classify individuals as board members when they hold officer status but have titles consistent with board roles (e.g., chair, secretary, treasurer, trustee, or director), including cases where the title includes “president” but the indicator variables suggest board-level service rather than executive leadership.
+
+    Next, I distinguish executive presidents from board presidents by incorporating information on hours worked. Individuals with “president” in their title who report substantial time commitment (at least 15 hours per week) are classified as executive presidents, while those with lower reported hours are treated as board members. This distinction helps separate operational leadership roles from ceremonial or governance roles. For individuals not yet classified, I assign roles based on both occupation and function. Physicians and other clinical professionals who appear as highly compensated employees (e.g., surgeons, anesthesiologists, nurses, physician assistants) are categorized as employees rather than executives. I also identify “non-executive leaders” based on titles indicating departmental or functional leadership (e.g., “division chief,” “medical director,” “director of ...”), as well as individuals with director titles who report substantial hours (at least 30 per week), suggesting operational responsibility rather than purely governance roles. I include additional rules to capture remaining board members whose indicator variables may be incomplete or inconsistently reported, relying on titles such as “board member” or “trustee” to assign them accordingly. Finally, I classify any remaining unassigned individuals (who are overwhelmingly highly specialized clinical staff) as employees.
+
+    After assigning roles, I define a subset of executive leadership by retaining individuals classified as CEO, CFO, COO, CMO, CNO, CIO, administrator, executive president, or other executive roles. This produces a consistent categorization of individuals into executives, board members, non-executive leaders, and employees, combining structured indicators with flexible text-based classification to accommodate variation in reporting practices across organizations.
+
+    I make several limitations to the person-level data. First, I remove individuals that are former personnel based on the form's ``former" indicator, and by checking if the word former is in the name or title. Second, I classify executives as full-time, part-time, or effectively external (``no-time") based on whether at least 75\% of their reported hours are worked at the specified organization versus related organizations, and then, within each firm-year, I drop ``no-time” executives when there are more than a minimal number of actively working leaders.
+
+
+
+
+
+
+    \section{Summary of Executive Teams}
+
+    \section{Correlation with Hospital Outcomes}
+
+    \section{Conclusion}
+    
+    
+
+
+
+    
+
+    
+
+	
+	
+	
+
+
+\end{document}
