@@ -181,12 +181,49 @@ sorting=nyt,citestyle=authoryear]{biblatex}
 
     I make several limitations to the person-level data. First, I remove individuals that are former personnel based on the form's ``former" indicator, and by checking if the word former is in the name or title. Second, I classify executives as full-time, part-time, or effectively external (``no-time") based on whether at least 75\% of their reported hours are worked at the specified organization versus related organizations, and then, within each firm-year, I drop ``no-time” executives when there are more than a minimal number of actively working leaders.
 
+    \subsection{Variable Construction}
+
+    
+
 
 
 
 
 
     \section{Summary of Executive Teams}
+
+    \begin{figure}[ht!]
+        \centering
+        \caption{Executive Team Characteristics Over Time}
+        \includegraphics[width=\linewidth]{Objects/hospital_exec_figure.pdf}
+        \label{fig:hospital_exec_figure}
+    \end{figure}
+
+
+\begin{table}[!h]
+\centering
+\caption{Executive Team Characteristics\label{tab:exec_table}}
+\centering
+\begin{tabular}[t]{lcccccc}
+\toprule
+Variable & Mean & Median & s.d. & Min & Max & N\\
+\midrule
+\addlinespace[0.3em]
+\multicolumn{7}{l}{\textbf{Compensation (000s, 2009 dollars)}}\\
+\hspace{1em}CEO compensation & 696 & 373 & 1,158 & 0 & 44,659 & 18,367\\
+\hspace{1em}Compensation per executive & 397 & 309 & 404 & 0 & 10,431 & 18,367\\
+\addlinespace[0.3em]
+\multicolumn{7}{l}{\textbf{Composition}}\\
+\hspace{1em}\% clinical & 0.2 & 0 & 0.25 & 0 & 1 & 18,367\\
+\hspace{1em}\% female & 0.35 & 0.33 & 0.3 & 0 & 1 & 18,261\\
+\hspace{1em}\% turnover & 0.22 & 0.12 & 0.28 & 0 & 1 & 16,551\\
+\hspace{1em}Team size & 3.75 & 3 & 2.37 & 1 & 27 & 18,367\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
 
     \section{Correlation with Hospital Outcomes}
 
