@@ -2,26 +2,29 @@
 \centering
 \caption{Hospital Outcomes by Leadership Composition}
 \centering
-\begin{tabular}[t]{lrrrrr}
+\begin{threeparttable}
+\begin{tabular}[t]{lccccc}
 \toprule
-\multicolumn{6}{c}{ } \\
-
-Outcome & N & No Clinician & Clinician Team & Non-Clinical CEO & Clinical CEO\\
+Outcome & N & Non-Clinical Team & Clinical Team & Non-Clinical CEO & Clinical CEO\\
 \midrule
 \addlinespace[0.3em]
 \multicolumn{6}{l}{\textbf{Patient Experience}}\\
-\hspace{1em}Overall rating & 71.88 & 69.83 & 70.36 & 70.17 & 10280\\
-\hspace{1em}Recommend hospital & 71.16 & 70.72 & 70.68 & 71.19 & 10279\\
+\hspace{1em}Overall rating & 10280 & 71.88 & 69.83 & 70.36 & 70.17\\
+\hspace{1em}Recommend hospital & 10279 & 71.16 & 70.72 & 70.68 & 71.19\\
 \addlinespace[0.3em]
 \multicolumn{6}{l}{\textbf{Mortality Outcomes}}\\
-\hspace{1em}AMI mortality & 14.80 & 14.25 & 14.44 & 14.04 & 7800\\
-\hspace{1em}Heart failure mortality & 12.09 & 11.74 & 11.85 & 11.75 & 10993\\
-\hspace{1em}Pneumonia mortality & 13.90 & 13.69 & 13.75 & 13.74 & 11932\\
+\hspace{1em}AMI mortality & 7800 & 14.80 & 14.25 & 14.44 & 14.04\\
+\hspace{1em}Heart failure mortality & 10993 & 12.09 & 11.74 & 11.85 & 11.75\\
+\hspace{1em}Pneumonia mortality & 11932 & 13.90 & 13.69 & 13.75 & 13.74\\
 \addlinespace[0.3em]
 \multicolumn{6}{l}{\textbf{Readmission Outcomes}}\\
-\hspace{1em}AMI readmission & 18.38 & 18.20 & 18.21 & 18.21 & 4791\\
-\hspace{1em}Heart failure readmission & 22.93 & 22.99 & 22.95 & 22.97 & 7325\\
-\hspace{1em}Pneumonia readmission & 17.36 & 17.59 & 17.52 & 17.57 & 7733\\
+\hspace{1em}AMI readmission & 4791 & 18.38 & 18.20 & 18.21 & 18.21\\
+\hspace{1em}Heart failure readmission & 7325 & 22.93 & 22.99 & 22.95 & 22.97\\
+\hspace{1em}Pneumonia readmission & 7733 & 17.36 & 17.59 & 17.52 & 17.57\\
 \bottomrule
 \end{tabular}
+\begin{tablenotes}
+\item Notes: Sample includes 1,770 hospitals contributing 20,892 hospital-year observations. 74.2% of hospital-years include at least one clinician on the executive team, and 27.4% of hospital-years are led by a clinical CEO.
+\end{tablenotes}
+\end{threeparttable}
 \end{table}
